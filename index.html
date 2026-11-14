@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nevidimka Chat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand-row">
+          <div class="brand-badge">N</div>
+          <div class="brand-copy">
+            <h1>Nevidimka</h1>
+            <small>AI Workspace</small>
+          </div>
+          <button class="new-chat-btn" id="new-chat-btn" title="Новий чат">＋</button>
+        </div>
+
+        <div class="sidebar-search">
+          <span class="search-icon">⌕</span>
+          <input id="chat-search" type="text" placeholder="Пошук чатів" aria-label="Пошук чатів" />
+        </div>
+
+        <div class="section-label">
+          <span>Чати</span>
+          <button class="mini-btn" id="toggle-sort-btn" title="Сортування">⋯</button>
+        </div>
+
+        <div id="chat-list" class="chat-list" aria-live="polite"></div>
+      </aside>
+
+      <main class="chat-panel">
+        <header class="topbar">
+          <button class="icon-btn mobile-only" id="sidebar-toggle" aria-label="Відкрити меню">☰</button>
+
+          <div class="chat-header">
+            <div class="avatar" id="active-avatar">A</div>
+            <div>
+              <h2 id="active-chat-title">Новий чат</h2>
+              <small id="active-chat-meta">Онлайн · готовий допомогти</small>
+            </div>
+          </div>
+
+          <div class="toolbar">
+            <div class="message-search-wrap">
+              <span>⌕</span>
+              <input id="message-search" type="text" placeholder="Пошук у повідомленнях" aria-label="Пошук у повідомленнях" />
+            </div>
+            <button class="icon-btn" id="theme-toggle" title="Перемкнути тему" aria-label="Перемкнути тему">🌙</button>
+            <button class="secondary-btn" id="rename-chat-btn">Перейменувати</button>
+          </div>
+        </header>
+
+        <section class="message-panel">
+          <div class="quick-actions" id="quick-actions"></div>
+          <div id="message-list" class="message-list" aria-live="polite"></div>
+        </section>
+
+        <footer class="composer">
+          <button class="icon-btn" id="attach-btn" title="Прикріпити" aria-label="Прикріпити файл">📎</button>
+          <button class="icon-btn" id="emoji-btn" title="Емодзі" aria-label="Додати емодзі">😊</button>
+          <input
+            id="message-input"
+            type="text"
+            placeholder="Напишіть повідомлення..."
+            aria-label="Повідомлення"
+            autocomplete="off"
+          />
+          <button class="send-btn" id="send-btn">Надіслати</button>
+        </footer>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
